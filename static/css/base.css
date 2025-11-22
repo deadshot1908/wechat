@@ -1,0 +1,121 @@
+/* ======= GLOBAL COLORS ======= */
+:root {
+    --green: #0f8a5f;
+    --green-dark: #0b6c4b;
+    --green-light: #e9f7f2;
+    --bg: #f3f6f4;
+    --white: #fff;
+    --border: #d9e6df;
+    --text-dark: #1c1c1c;
+    --text-light: #555;
+}
+
+/* GLOBAL PAGE SETTINGS */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text-dark);
+    overflow: hidden;
+}
+
+/* MAIN FLEX LAYOUT */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* ======= LEFT NAV BAR (GREEN BACKGROUND) ======= */
+.left-nav {
+    width: 20%;
+    background: var(--green);        /* ★ GREEN BACKGROUND */
+    padding: 20px;
+    border-right: 1px solid var(--border);
+    overflow-y: auto;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+}
+
+/* Logo on green background */
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: white;                    /* ★ Make logo text white */
+    margin-bottom: 25px;
+}
+
+.left-nav a {
+    text-decoration: none;
+    display: block;
+}
+
+/* Logo container */
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+/* Logo image */
+.logo-img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+/* Logo text */
+.logo-text {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+/* nav-item reused for both div and a */
+.nav-item {
+    padding: 14px 12px;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    color: white;                    /* ★ White text on green */
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+}
+
+/* Hover effect on green background */
+.nav-item:hover {
+    background: var(--green-dark);   /* ★ Darker green hover */
+    color: white;
+}
+
+/* ======= MAIN CONTENT ======= */
+.main-content {
+    width: 60%;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* ======= RIGHT SIDE CONTENT ======= */
+.right-side {
+    width: 20%;
+    padding: 20px;
+    border-left: 1px solid var(--border);
+    background: var(--white);
+    overflow-y: auto;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.05);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c2d6ce;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #9dbfb3;
+}

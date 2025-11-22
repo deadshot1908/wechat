@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}WeChat{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% block style %}{% endblock %}
+</head>
+<body>
+
+<div class="container">
+
+    <!-- LEFT NAVIGATION -->
+    <aside class="left-nav">
+
+    <div class="logo-wrapper">
+        <div class="logo-text">WeChat</div>
+        <img src="{% static 'images/logo.png' %}" alt="WeChat Logo" class="logo-img">
+        
+    </div>
+
+
+        <a href="#" class="nav-item">🏠 Home</a>
+        <a href="#" class="nav-item">💬 Messages</a>
+        <a href="#" class="nav-item">👥 Groups</a>
+        <a href="#" class="nav-item">📇 Contacts</a>
+        <a href="#" class="nav-item">⚙️ Settings</a>
+        <a href="#" class="nav-item">❓ Help</a>
+
+    </aside>
+
+    <!-- MAIN CONTENT (Dynamic Block) -->
+    <main class="main-content">
+        {% block main_content %}
+        {% endblock %}
+    </main>
+
+    <!-- RIGHT SIDE CONTENT (Dynamic Block) -->
+    <aside class="right-side">
+        {% block side_content %}
+        {% endblock %}
+    </aside>
+
+</div>
+
+</body>
+</html>
